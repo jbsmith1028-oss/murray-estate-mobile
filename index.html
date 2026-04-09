@@ -41,7 +41,7 @@
 
   /* === COVER === */
   .cover {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,11 +438,25 @@
   /* === RESPONSIVE === */
   @media (max-width: 768px) {
     .card-grid, .card-grid.cols-3, .card-grid.cols-4 { grid-template-columns: 1fr; }
-    .two-col { grid-template-columns: 1fr; }
-    .cover-title { font-size: 32px; }
-    .container { padding: 0 20px; }
-    .flow-container { padding: 20px; }
-    .tab-btn { padding: 14px 14px; font-size: 11px; }
+    .card-grid > * { grid-column: span 1 !important; }
+    .two-col { grid-template-columns: 1fr; gap: 20px; }
+    .cover-title { font-size: 28px; }
+    .cover-subtitle { font-size: 15px; }
+    .section-title { font-size: 22px; }
+    .section-intro { font-size: 14px; }
+    .card-title { font-size: 16px; }
+    .container { padding: 0 18px; }
+    section { padding: 40px 0; }
+    .flow-container { padding: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .flow-container svg { min-width: 700px; }
+    .tab-nav { padding: 0 12px; gap: 0; }
+    .tab-btn { padding: 14px 12px; font-size: 11px; }
+    .comp-table { font-size: 12px; }
+    .comp-table th, .comp-table td { padding: 10px 10px; }
+    .fid-table th, .fid-table td { padding: 10px 10px; font-size: 12px; }
+    .scenario-header h3 { font-size: 15px; }
+    .callout { padding: 14px 16px; }
+    .card { padding: 20px; }
   }
 
   @media print {
@@ -494,14 +508,15 @@
 </div>
 
 <!-- ====== TAB NAV ====== -->
+<div id="tab-top" style="height:0;overflow:hidden;"></div>
 <nav class="tab-nav">
-  <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
-  <button class="tab-btn" onclick="showTab('flow')">Estate Flow</button>
-  <button class="tab-btn" onclick="showTab('eli')">Eli's Provisions</button>
-  <button class="tab-btn" onclick="showTab('ira')">IRA Trusts</button>
-  <button class="tab-btn" onclick="showTab('fiduciaries')">Fiduciaries</button>
-  <button class="tab-btn" onclick="showTab('features')">Key Features</button>
-  <button class="tab-btn" onclick="showTab('healthcare')">Healthcare &amp; POA</button>
+  <button class="tab-btn active" onclick="showTab('overview', this)">Overview</button>
+  <button class="tab-btn" onclick="showTab('flow', this)">Estate Flow</button>
+  <button class="tab-btn" onclick="showTab('eli', this)">Eli's Provisions</button>
+  <button class="tab-btn" onclick="showTab('ira', this)">IRA Trusts</button>
+  <button class="tab-btn" onclick="showTab('fiduciaries', this)">Fiduciaries</button>
+  <button class="tab-btn" onclick="showTab('features', this)">Key Features</button>
+  <button class="tab-btn" onclick="showTab('healthcare', this)">Healthcare &amp; POA</button>
 </nav>
 
 <!-- ============================================================ -->
@@ -1807,12 +1822,12 @@ if (sessionStorage.getItem('murray-auth') === 'true') {
 }
 
 // === TAB NAVIGATION ===
-function showTab(id) {
+function showTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  event.currentTarget.classList.add('active');
-  window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop, behavior: 'smooth' });
+  btn.classList.add('active');
+  document.getElementById('tab-top').scrollIntoView(true);
 }
 </script>
 </body>
