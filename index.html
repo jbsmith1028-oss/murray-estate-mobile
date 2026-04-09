@@ -1827,7 +1827,11 @@ function showTab(id, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   btn.classList.add('active');
-  document.getElementById('tab-top').scrollIntoView(true);
+  if (id === 'overview') {
+    window.scrollTo(0, 0);
+  } else {
+    document.getElementById('tab-top').scrollIntoView(true);
+  }
 }
 </script>
 </body>
