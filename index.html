@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Murray Family Estate Plan — Summary</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c0f;
+    --bg-card: #12151a;
+    --bg-card-alt: #181c23;
+    --border: #1e2330;
+    --border-accent: #2a3040;
+    --gold: #c9a84c;
+    --gold-dim: #a08838;
+    --gold-bright: #dfc06a;
+    --text: #d4d4d4;
+    --text-dim: #8a8f9a;
+    --text-bright: #f0f0f0;
+    --red: #cc0000;
+    --red-dim: #991a1a;
+    --green: #2d8a4e;
+    --blue: #3a7bd5;
+    --blue-dim: #2a5ba5;
+    --accent-teal: #3a9a8a;
+    --accent-purple: #7a5ac0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* === COVER === */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(58,123,213,0.04) 0%, transparent 60%);
+  }
+  .cover-brand {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 60px;
+    position: relative;
+  }
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--text-bright);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .cover-subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text-dim);
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  .cover-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    position: relative;
+  }
+
+  /* === LAYOUT === */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* === TAB NAV === */
+  .tab-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,12,15,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* === TAB PANELS === */
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 24px;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: var(--text-dim);
+    max-width: 750px;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  /* === CARDS === */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .card-grid.cols-1 { grid-template-columns: 1fr; }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--border-accent); }
+  .card-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 12px;
+  }
+  .card p, .card li {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .card ul li {
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .card.highlight {
+    border-color: var(--gold-dim);
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, var(--bg-card) 60%);
+  }
+  .card.alert {
+    border-color: var(--red-dim);
+    background: linear-gradient(135deg, rgba(204,0,0,0.04) 0%, var(--bg-card) 60%);
+  }
+  .card.blue-accent {
+    border-color: var(--blue-dim);
+    background: linear-gradient(135deg, rgba(58,123,213,0.04) 0%, var(--bg-card) 60%);
+  }
+  .card.teal-accent {
+    border-color: rgba(58,154,138,0.4);
+    background: linear-gradient(135deg, rgba(58,154,138,0.04) 0%, var(--bg-card) 60%);
+  }
+  .card.purple-accent {
+    border-color: rgba(122,90,192,0.4);
+    background: linear-gradient(135deg, rgba(122,90,192,0.04) 0%, var(--bg-card) 60%);
+  }
+
+  /* === FLOW DIAGRAMS === */
+  .flow-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+    margin: 24px 0;
+    overflow-x: auto;
+  }
+  .flow-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--text-bright);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .flow-container svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* === FIDUCIARY TABLE === */
+  .fid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .fid-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .fid-table td {
+    font-size: 13px;
+    color: var(--text);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .fid-table tr:last-child td { border-bottom: none; }
+  .fid-table .role-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--gold-dim);
+    width: 30px;
+  }
+
+  /* === SCENARIO BLOCKS === */
+  .scenario {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+  }
+  .scenario-header {
+    padding: 16px 24px;
+    background: var(--bg-card-alt);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .scenario-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .scenario-icon.gold { background: rgba(201,168,76,0.15); color: var(--gold); }
+  .scenario-icon.blue { background: rgba(58,123,213,0.15); color: var(--blue); }
+  .scenario-icon.teal { background: rgba(58,154,138,0.15); color: var(--accent-teal); }
+  .scenario-icon.purple { background: rgba(122,90,192,0.15); color: var(--accent-purple); }
+  .scenario-icon.red { background: rgba(204,0,0,0.12); color: var(--red); }
+  .scenario-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+  .scenario-body {
+    padding: 24px;
+  }
+  .scenario-body p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .scenario-body p:last-child { margin-bottom: 0; }
+
+  /* === CALLOUT === */
+  .callout {
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+    margin: 20px 0;
+    background: rgba(201,168,76,0.04);
+    border-radius: 0 6px 6px 0;
+  }
+  .callout.blue { border-left-color: var(--blue); background: rgba(58,123,213,0.04); }
+  .callout.red { border-left-color: var(--red); background: rgba(204,0,0,0.03); }
+  .callout.teal { border-left-color: var(--accent-teal); background: rgba(58,154,138,0.04); }
+  .callout p {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .callout strong { color: var(--text-bright); }
+
+  /* === TWO COL === */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 24px 0;
+  }
+  .col-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* === COMPARISON TABLE === */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .comp-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--border-accent);
+    background: var(--bg-card-alt);
+  }
+  .comp-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table .feature-label {
+    font-weight: 600;
+    color: var(--text-bright);
+    white-space: nowrap;
+  }
+  .comp-table .match { color: var(--text-dim); }
+  .comp-table .diff { color: var(--gold); font-weight: 500; }
+
+  /* === FOOTER === */
+  .footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  .footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .card-grid, .card-grid.cols-3, .card-grid.cols-4 { grid-template-columns: 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+    .cover-title { font-size: 32px; }
+    .container { padding: 0 20px; }
+    .flow-container { padding: 20px; }
+    .tab-btn { padding: 14px 14px; font-size: 11px; }
+  }
+
+  @media print {
+    body { background: #fff; color: #222; }
+    .cover { min-height: auto; page-break-after: always; }
+    .tab-nav { display: none; }
+    .tab-panel { display: block !important; }
+    section { page-break-inside: avoid; }
+    .card { border-color: #ccc; background: #f9f9f9; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== PASSWORD GATE ====== -->
+<div id="auth-gate" style="display:flex; min-height:100vh; align-items:center; justify-content:center; padding:40px;">
+  <div style="text-align:center; max-width:380px; width:100%;">
+    <div style="font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:#c9a84c; margin-bottom:40px;">UBS | Alpha Partners</div>
+    <h1 style="font-family:'Playfair Display',serif; font-size:28px; font-weight:700; color:#f0f0f0; margin-bottom:8px;">Murray Family</h1>
+    <p style="font-family:'IBM Plex Sans',sans-serif; font-size:14px; color:#8a8f9a; margin-bottom:32px;">Estate Plan Summary</p>
+    <div style="width:60px; height:2px; background:#c9a84c; margin:0 auto 32px;"></div>
+    <div style="position:relative;">
+      <input id="auth-input" type="password" placeholder="Enter password" autocomplete="off"
+        style="width:100%; padding:14px 18px; font-family:'IBM Plex Sans',sans-serif; font-size:14px; background:#12151a; border:1px solid #2a3040; border-radius:6px; color:#f0f0f0; outline:none; transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='#c9a84c'" onblur="this.style.borderColor='#2a3040'">
+      <p id="auth-error" style="font-family:'IBM Plex Sans',sans-serif; font-size:12px; color:#cc0000; margin-top:12px; display:none;">Incorrect password</p>
+    </div>
+    <button id="auth-btn" onclick="checkPassword()"
+      style="margin-top:20px; padding:12px 36px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; font-weight:500; letter-spacing:0.5px; background:transparent; border:1px solid #c9a84c; color:#c9a84c; border-radius:6px; cursor:pointer; transition:all 0.2s;"
+      onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='transparent'">
+      Continue
+    </button>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:9px; color:#555; margin-top:40px; letter-spacing:1px;">CONFIDENTIAL — AUTHORIZED ACCESS ONLY</p>
+  </div>
+</div>
+
+<div id="app-content" style="display:none;">
+
+<!-- ====== COVER ====== -->
+<div class="cover">
+  <div class="cover-brand">UBS | Alpha Partners</div>
+  <h1 class="cover-title">Murray Family<br>Estate Plan Summary</h1>
+  <p class="cover-subtitle">Mark E. Murray &amp; Claire C. Murray &mdash; Fulton County, Georgia</p>
+  <div class="cover-divider"></div>
+  <div class="cover-meta">
+    Last Will &amp; Testament + Revocable Trust + IRA Trusts + Healthcare Directives + Powers of Attorney &mdash; 2025 Draft Documents<br>
+    Prepared by Duncan Spratt P.A. &bull; 191 Peachtree Street NE #4400, Atlanta, GA 30303
+  </div>
+</div>
+
+<!-- ====== TAB NAV ====== -->
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
+  <button class="tab-btn" onclick="showTab('flow')">Estate Flow</button>
+  <button class="tab-btn" onclick="showTab('eli')">Eli's Provisions</button>
+  <button class="tab-btn" onclick="showTab('ira')">IRA Trusts</button>
+  <button class="tab-btn" onclick="showTab('fiduciaries')">Fiduciaries</button>
+  <button class="tab-btn" onclick="showTab('features')">Key Features</button>
+  <button class="tab-btn" onclick="showTab('healthcare')">Healthcare &amp; POA</button>
+</nav>
+
+<!-- ============================================================ -->
+<!-- TAB 1: OVERVIEW                                               -->
+<!-- ============================================================ -->
+<div id="overview" class="tab-panel active">
+
+<section>
+<div class="container">
+  <div class="section-label">Family Overview</div>
+  <h2 class="section-title">Family &amp; Document Inventory</h2>
+  <p class="section-intro">The Murray estate plan consists of eleven coordinated documents &mdash; a Last Will and Testament and a Revocable Trust for each spouse, three standalone IRA Trusts (one per child), an Advance Directive for Health Care and a Durable Power of Attorney for each spouse &mdash; designed as mirror-image plans with identical structures and reciprocal provisions.</p>
+
+  <div class="card-grid cols-4">
+    <div class="card highlight">
+      <div class="card-label">Grantor</div>
+      <div class="card-title">Mark E. Murray</div>
+      <p>Husband. Grantor of the Mark E. Murray Revocable Trust and all three IRA Trusts.</p>
+    </div>
+    <div class="card highlight">
+      <div class="card-label">Grantor</div>
+      <div class="card-title">Claire C. Murray</div>
+      <p>Wife. Grantor of the Claire C. Murray Revocable Trust.</p>
+    </div>
+    <div class="card" style="grid-column: span 2;">
+      <div class="card-label">Children (3)</div>
+      <div class="card-title">Eli, Landon &amp; Blakely</div>
+      <ul>
+        <li><strong>Eli B. Murray</strong> &mdash; special residence protections &amp; trustee restrictions apply</li>
+        <li><strong>Landon C. Murray</strong></li>
+        <li><strong>Blakely C. Murray</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Mirror-Image Structure:</strong> Both spouses' Wills and Revocable Trusts are substantively identical &mdash; the same succession of fiduciaries, the same trust terms, the same special provisions for Eli. The only difference is which spouse is the grantor and which is the surviving beneficiary.</p>
+  </div>
+
+  <!-- Document Inventory -->
+  <h2 class="section-title" style="margin-top:48px;">Document Inventory</h2>
+  <p class="section-intro">Eleven documents work together as an integrated plan. Each Will pours the residuary estate into its companion Revocable Trust. The three IRA Trusts sit alongside to receive retirement plan assets via beneficiary designation. Each spouse also has an Advance Directive for Health Care and a Durable Power of Attorney for financial management.</p>
+
+  <div class="two-col">
+    <div>
+      <div class="col-title">Mark E. Murray</div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-label">Document 1</div>
+        <div class="card-title">Last Will &amp; Testament</div>
+        <p>Tangible personal property to Claire (or descendants per stirpes). Each spouse may create a <strong>separate writing</strong> directing specific items to desired recipients. Residuary estate pours into the Mark E. Murray Revocable Trust. Appoints executor and guardian for minor children.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Document 2</div>
+        <div class="card-title">Revocable Trust</div>
+        <p>25-page instrument containing the core distribution plan: spousal outright distribution, Family Trust, Residence Trust, and individual Descendant's Trusts for each child. 360-year dynasty structure.</p>
+      </div>
+    </div>
+    <div>
+      <div class="col-title">Claire C. Murray</div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-label">Document 3</div>
+        <div class="card-title">Last Will &amp; Testament</div>
+        <p>Tangible personal property to Mark (or descendants per stirpes). Each spouse may create a <strong>separate writing</strong> directing specific items to desired recipients. Residuary estate pours into the Claire C. Murray Revocable Trust. Appoints executor and guardian for minor children.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Document 4</div>
+        <div class="card-title">Revocable Trust</div>
+        <p>25-page instrument &mdash; identical structure to Mark's trust. Same spousal outright distribution, Family Trust, Residence Trust, Descendant's Trust architecture, and 360-year dynasty term.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid cols-3" style="margin-top:24px;">
+    <div class="card teal-accent">
+      <div class="card-label">Document 5</div>
+      <div class="card-title">Eli B. Murray 2025 Trust</div>
+      <p>Standalone IRA trust created by Mark. Designed to receive retirement plan assets as named beneficiary. Eli is primary beneficiary with full discretionary distributions.</p>
+    </div>
+    <div class="card teal-accent">
+      <div class="card-label">Document 6</div>
+      <div class="card-title">Landon C. Murray 2025 Trust</div>
+      <p>Standalone IRA trust created by Mark. Same structure as Eli's trust, with Landon as primary beneficiary. Landon eligible for self-trusteeship at ages 30/35.</p>
+    </div>
+    <div class="card teal-accent">
+      <div class="card-label">Document 7</div>
+      <div class="card-title">Blakely C. Murray 2025 Trust</div>
+      <p>Standalone IRA trust created by Mark. Same structure as Landon's trust, with Blakely as primary beneficiary. Blakely eligible for self-trusteeship at ages 30/35.</p>
+    </div>
+  </div>
+
+  <div class="callout teal">
+    <p><strong>Why Separate IRA Trusts?</strong> Retirement plan assets (IRAs, 401(k)s) pass by beneficiary designation, not through the Will or Revocable Trust. These standalone trusts allow Mark to name a trust &mdash; rather than the children individually &mdash; as the IRA beneficiary, preserving creditor protection, spendthrift provisions, and trustee oversight over inherited retirement assets while maintaining compliance with IRS required minimum distribution rules under IRC §401(a)(9).</p>
+  </div>
+
+  <div class="callout red">
+    <p><strong>Action Required — Beneficiary Designations:</strong> Per the attorney's memo, the Murrays will need to <strong>update the beneficiary designations on certain retirement accounts</strong> to name the Children's Trusts as contingent beneficiaries. This is a critical implementation step &mdash; the IRA Trusts only work if the beneficiary designation forms actually point to them. Duncan Spratt will discuss how to update these designations when the Murrays are ready.</p>
+  </div>
+
+  <h2 class="section-title" style="margin-top:48px;">Healthcare &amp; Financial Powers</h2>
+  <p class="section-intro">Each spouse has executed two additional documents that govern decision-making authority during lifetime incapacity: an Advance Directive for Health Care and a Durable Power of Attorney. These are reciprocal &mdash; each spouse names the other as primary agent.</p>
+
+  <div class="two-col">
+    <div>
+      <div class="col-title">Mark E. Murray</div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-label">Document 8</div>
+        <div class="card-title">Advance Directive for Health Care</div>
+        <p>Georgia statutory form. Names Claire as health care agent with full powers including admission/discharge, treatment consent, HIPAA access, and post-death authority (autopsy, organ donation, final disposition).</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Document 9</div>
+        <div class="card-title">Durable Power of Attorney</div>
+        <p>Georgia statutory form under O.C.G.A. Chapter 6B of Title 10. Names Claire as agent with broad authority over all financial, property, and legal matters. Effective immediately. Includes special instructions for trust management and gifting.</p>
+      </div>
+    </div>
+    <div>
+      <div class="col-title">Claire C. Murray</div>
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-label">Document 10</div>
+        <div class="card-title">Advance Directive for Health Care</div>
+        <p>Georgia statutory form. Names Mark as health care agent with full powers including admission/discharge, treatment consent, HIPAA access, and post-death authority (autopsy, organ donation, final disposition).</p>
+      </div>
+      <div class="card">
+        <div class="card-label">Document 11</div>
+        <div class="card-title">Durable Power of Attorney</div>
+        <p>Georgia statutory form under O.C.G.A. Chapter 6B of Title 10. Names Mark as agent with broad authority over all financial, property, and legal matters. Effective immediately. Includes special instructions for trust management and gifting.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 2: ESTATE FLOW                                            -->
+<!-- ============================================================ -->
+<div id="flow" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">Estate Flow</div>
+  <h2 class="section-title">How the Estate Flows</h2>
+  <p class="section-intro">This diagram traces the path of assets from either spouse's death through the trust structure. The same flow applies to both Mark's and Claire's plans. IRA assets flow separately through the standalone IRA Trusts (see IRA Trusts tab).</p>
+
+  <div class="flow-container">
+    <div class="flow-title">Estate Distribution Flowchart &mdash; Either Spouse's Death</div>
+    <svg viewBox="0 0 900 820" xmlns="http://www.w3.org/2000/svg" style="max-width:900px;width:100%;">
+      <defs>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Row 1: Death -->
+      <rect x="310" y="10" width="280" height="50" rx="6" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="450" y="41" text-anchor="middle" font-family="Playfair Display,serif" font-size="15" fill="#f0f0f0" font-weight="600">First Spouse's Death</text>
+
+      <line x1="450" y1="60" x2="450" y2="90" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="445,88 455,88 450,96" fill="#3a4050"/>
+
+      <!-- Row 2: Will -->
+      <rect x="310" y="96" width="280" height="44" rx="6" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="450" y="118" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="#d4d4d4">Will: Tangible Property → Surviving Spouse</text>
+      <text x="450" y="133" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#8a8f9a">Residuary Estate pours into →</text>
+
+      <line x1="450" y1="140" x2="450" y2="170" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="445,168 455,168 450,176" fill="#3a4050"/>
+
+      <!-- Row 3: Revocable Trust -->
+      <rect x="310" y="176" width="280" height="44" rx="6" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="450" y="203" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#c9a84c" font-weight="600">Revocable Trust</text>
+
+      <!-- Decision diamond -->
+      <line x1="450" y1="220" x2="450" y2="260" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="450,260 490,290 450,320 410,290" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.2"/>
+      <text x="450" y="293" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#c9a84c" font-weight="600">SPOUSE</text>
+      <text x="450" y="304" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#c9a84c" font-weight="600">SURVIVES?</text>
+
+      <!-- LEFT: YES -->
+      <line x1="410" y1="290" x2="200" y2="290" stroke="#2d8a4e" stroke-width="1.5"/>
+      <line x1="200" y1="290" x2="200" y2="340" stroke="#2d8a4e" stroke-width="1.5"/>
+      <polygon points="195,338 205,338 200,346" fill="#2d8a4e"/>
+      <text x="300" y="283" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#2d8a4e" font-weight="500">YES</text>
+
+      <rect x="90" y="346" width="220" height="50" rx="6" fill="#1a2a1e" stroke="#2d8a4e" stroke-width="1.2"/>
+      <text x="200" y="368" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="13" fill="#f0f0f0" font-weight="600">All to Surviving Spouse</text>
+      <text x="200" y="384" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Outright distribution (Art. IV(a))</text>
+
+      <!-- Renunciation option -->
+      <line x1="200" y1="396" x2="200" y2="430" stroke="#3a4050" stroke-width="1" stroke-dasharray="4,3"/>
+      <polygon points="195,428 205,428 200,436" fill="#3a4050"/>
+      <rect x="90" y="436" width="220" height="40" rx="6" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="200" y="455" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#8a8f9a">If spouse disclaims any portion →</text>
+      <text x="200" y="468" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#8a8f9a">disclaimed amount → Family Trust</text>
+      <line x1="310" y1="456" x2="450" y2="456" stroke="#3a4050" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="450" y1="456" x2="450" y2="500" stroke="#3a4050" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- RIGHT: NO -->
+      <line x1="490" y1="290" x2="700" y2="290" stroke="#cc0000" stroke-width="1.5"/>
+      <line x1="700" y1="290" x2="700" y2="340" stroke="#cc0000" stroke-width="1.5"/>
+      <polygon points="695,338 705,338 700,346" fill="#cc0000"/>
+      <text x="600" y="283" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#cc0000" font-weight="500">NO</text>
+
+      <line x1="700" y1="346" x2="700" y2="500" stroke="#cc0000" stroke-width="1.5"/>
+      <line x1="700" y1="500" x2="560" y2="500" stroke="#3a4050" stroke-width="1.5"/>
+
+      <!-- FAMILY TRUST -->
+      <rect x="340" y="486" width="220" height="50" rx="6" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="450" y="508" text-anchor="middle" font-family="Playfair Display,serif" font-size="14" fill="#c9a84c" font-weight="600">Family Trust</text>
+      <text x="450" y="524" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Article V — Spouse primary + Descendants</text>
+
+      <line x1="450" y1="536" x2="450" y2="570" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="445,568 455,568 450,576" fill="#3a4050"/>
+
+      <rect x="310" y="576" width="280" height="44" rx="6" fill="#1a1e28" stroke="#3a7bd5" stroke-width="1.2"/>
+      <text x="450" y="596" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="12" fill="#3a7bd5" font-weight="600">Division Date Reached</text>
+      <text x="450" y="611" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Later of: spouse's death OR youngest child turns 25</text>
+
+      <!-- Split into two -->
+      <line x1="450" y1="620" x2="450" y2="645" stroke="#3a4050" stroke-width="1.5"/>
+
+      <line x1="450" y1="645" x2="250" y2="645" stroke="#3a4050" stroke-width="1.5"/>
+      <line x1="250" y1="645" x2="250" y2="675" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="245,673 255,673 250,681" fill="#3a4050"/>
+
+      <line x1="450" y1="645" x2="650" y2="645" stroke="#3a4050" stroke-width="1.5"/>
+      <line x1="650" y1="645" x2="650" y2="675" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="645,673 655,673 650,681" fill="#3a4050"/>
+
+      <!-- Residence Trust -->
+      <rect x="130" y="681" width="240" height="56" rx="6" fill="#1a1e28" stroke="#3a9a8a" stroke-width="1.2"/>
+      <text x="250" y="704" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#3a9a8a" font-weight="600">Residence Trust</text>
+      <text x="250" y="720" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Real property — Eli's lifetime right</text>
+      <text x="250" y="732" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Terminates on Eli's death</text>
+
+      <!-- Descendant's Trusts -->
+      <rect x="530" y="681" width="240" height="56" rx="6" fill="#1a1e28" stroke="#7a5ac0" stroke-width="1.2"/>
+      <text x="650" y="704" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#7a5ac0" font-weight="600">Descendant's Trusts</text>
+      <text x="650" y="720" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">All non-real-property — per stirpes</text>
+      <text x="650" y="732" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Article VI — 360-year dynasty</text>
+
+      <!-- Residence Trust arrow to Descendant's -->
+      <line x1="370" y1="720" x2="530" y2="720" stroke="#3a4050" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="450" y="714" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">On Eli's death →</text>
+
+      <!-- IRA callout -->
+      <rect x="60" y="775" width="780" height="36" rx="4" fill="rgba(58,154,138,0.08)" stroke="rgba(58,154,138,0.3)" stroke-width="1"/>
+      <text x="450" y="798" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#3a9a8a">IRA / Retirement Plan assets flow separately through the three standalone IRA Trusts — see IRA Trusts tab</text>
+    </svg>
+  </div>
+</div>
+</section>
+
+<!-- Distribution Scenarios -->
+<section>
+<div class="container">
+  <div class="section-label">Distribution Scenarios</div>
+  <h2 class="section-title">How Assets Distribute in Each Scenario</h2>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-icon gold">A</div>
+      <h3>First Spouse Dies — Surviving Spouse Receives Everything</h3>
+    </div>
+    <div class="scenario-body">
+      <p>All trust assets pass outright to the surviving spouse with no restrictions. The surviving spouse receives the assets free and clear — not in trust — and can use, invest, or give them away as they choose.</p>
+      <p>The surviving spouse has the option to <strong>disclaim</strong> (renounce) some or all of the inheritance. Any disclaimed assets flow into the <strong>Family Trust</strong> instead, where they are managed for the benefit of the spouse and descendants under trustee discretion. This is a tax planning tool — disclaiming into the Family Trust can shelter assets from the surviving spouse's taxable estate.</p>
+      <p style="margin-top:8px;"><strong>Critical deadline:</strong> A qualified disclaimer under IRC §2518 must be executed <strong>in writing within 9 months</strong> of the deceased spouse's date of death. The surviving spouse must not accept the property or receive any benefits from it prior to disclaimer. Per the attorney's memo, the Murrays should contact Duncan Spratt upon either spouse's death to ensure the ability to disclaim is preserved and properly completed.</p>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-icon blue">B</div>
+      <h3>Both Spouses Deceased (or No Surviving Spouse) — Family Trust</h3>
+    </div>
+    <div class="scenario-body">
+      <p>If there is no surviving spouse (either because the second spouse has now died, or both died simultaneously), all assets flow into the <strong>Family Trust (Article V)</strong>. During the Family Trust phase, the surviving spouse (if still alive) is the primary beneficiary, with descendants also eligible for discretionary distributions.</p>
+      <p>The Family Trust continues until the <strong>Division Date</strong> — the later of: (i) the surviving spouse's death, and (ii) the youngest living child reaching age 25. At that point, the trust splits into two components: the <strong>Residence Trust</strong> (for real property) and individual <strong>Descendant's Trusts</strong> (for everything else).</p>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-icon teal">C</div>
+      <h3>Division Date Reached — Residence Trust + Descendant's Trusts</h3>
+    </div>
+    <div class="scenario-body">
+      <p><strong>Residence Trust:</strong> All trust-owned real property is carved out and held in a separate Residence Trust. Eli has the <strong>right to reside rent-free for his lifetime</strong> in any property held here. The other children (Landon and Blakely) may also use the property rent-free but cannot displace Eli. The trustee may sell real property that Eli is <strong>not</strong> using as his primary residence, with proceeds flowing to the Descendant's Trusts. Upon Eli's death, all remaining Residence Trust property is distributed to the Descendant's Trusts.</p>
+      <p><strong>Descendant's Trusts (Article VI):</strong> All non-real-property assets are divided among the grantor's then-living descendants, <strong>per stirpes</strong>, with each share held in a separate trust. Each Descendant's Trust must contribute its proportional share to the <strong>Residence Trust expenses</strong> (taxes, insurance, maintenance) before making other distributions. The primary beneficiary receives discretionary distributions for support and comfort, with remaining assets available for that beneficiary's own descendants.</p>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <div class="scenario-header">
+      <div class="scenario-icon red">D</div>
+      <h3>No Surviving Descendants — Default Distribution</h3>
+    </div>
+    <div class="scenario-body">
+      <p>If no lineal descendant of the grantor survives, the default provision (Article VII) distributes assets <strong>one-half to the grantor's then-living heirs</strong> and <strong>one-half to the grantor's spouse's then-living heirs</strong>, determined under Georgia intestacy law.</p>
+    </div>
+  </div>
+
+  <div class="callout red" style="margin-top:20px;">
+    <p><strong>Open Item — Article VII (Remote Takers):</strong> Per the attorney's memo (Nov. 21, 2025), the default distribution provision in the new Revocable Trusts <strong>differs from the provisions in the Murrays' prior Wills</strong>. Duncan Spratt has asked the Murrays whether Article VII should be updated to mirror their prior Wills or to include trusts for specific family members. This item needs to be resolved before signing.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 3: ELI'S PROVISIONS                                       -->
+<!-- ============================================================ -->
+<div id="eli" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">Special Provisions</div>
+  <h2 class="section-title">Special Provisions for Eli</h2>
+  <p class="section-intro">Both Revocable Trusts and all three IRA Trusts contain provisions specifically tailored for Eli B. Murray that differ from those applicable to Landon and Blakely. These provisions appear consistently across all seven documents.</p>
+
+  <div class="card-grid">
+    <div class="card highlight">
+      <div class="card-label">Residence Right — Family Trust</div>
+      <div class="card-title">Rent-Free Residence During Family Trust</div>
+      <p>During the Family Trust phase (Article V(b)), Eli is entitled to reside rent-free and without liability for waste in any trust-owned real property not otherwise used or occupied by the surviving spouse. The trustee is prohibited from selling any property that Eli uses as his primary residence.</p>
+    </div>
+    <div class="card highlight">
+      <div class="card-label">Residence Right — Residence Trust</div>
+      <div class="card-title">Lifetime Residence in the Residence Trust</div>
+      <p>After the Division Date, Eli retains the right to reside rent-free for his <strong>entire lifetime</strong> in any Residence Trust real property (Article V(d)(1)). The other children may use the property but cannot sell it out from under Eli. The Residence Trust terminates upon Eli's death.</p>
+    </div>
+    <div class="card alert">
+      <div class="card-label">Trustee Exclusion — All Documents</div>
+      <div class="card-title">Eli Cannot Serve as His Own Trustee</div>
+      <p>Across both Revocable Trusts <strong>and</strong> all three IRA Trusts, Eli is explicitly excluded from serving as trustee of his own trust. In each IRA Trust's Item IX(d), the self-trusteeship provision reads "other than ELI." Unlike Landon and Blakely — who may elect co-trusteeship at age 30 and sole trusteeship at age 35 — Eli's trusts will always be managed by an independent trustee.</p>
+    </div>
+    <div class="card blue-accent">
+      <div class="card-label">Maintenance Funding</div>
+      <div class="card-title">Residence Expense Contributions</div>
+      <p>Each Descendant's Trust must maintain a <strong>Reserve Requirement</strong> and contribute proportionally to Residence Trust expenses — taxes, insurance, maintenance, and improvements (Article VI(a)). If trustees disagree on amounts, each trust contributes equally. This ensures the property Eli occupies is properly maintained.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Consistent Treatment:</strong> The exclusion of Eli from self-trusteeship appears in every trust instrument across the plan — the Revocable Trusts, Eli's own IRA Trust, and even Landon's and Blakely's IRA Trusts (which reference Eli by name in their successor trust provisions). Combined with the lifetime residence rights, this provides Eli with robust housing security and ongoing financial support under independent fiduciary oversight.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 4: IRA TRUSTS                                             -->
+<!-- ============================================================ -->
+<div id="ira" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">IRA Trusts</div>
+  <h2 class="section-title">Standalone IRA Trusts</h2>
+  <p class="section-intro">Mark has created three separate trusts — one for each child — designed to be named as beneficiaries of his retirement plan accounts (IRAs, 401(k)s). These trusts sit outside the Revocable Trust structure and are funded only when retirement plan assets are payable at Mark's death.</p>
+
+  <div class="card-grid cols-3">
+    <div class="card teal-accent">
+      <div class="card-label">Eli B. Murray 2025 Trust</div>
+      <div class="card-title">Eli's IRA Trust</div>
+      <ul>
+        <li><strong>Grantor &amp; Initial Trustee:</strong> Mark E. Murray</li>
+        <li><strong>Primary Beneficiary:</strong> Eli, with welfare priority over principal preservation</li>
+        <li><strong>Distribution Standard:</strong> Sole discretion of Trustee — no mandatory distributions to Eli at any age</li>
+        <li><strong>Trustee Exclusion:</strong> Eli may <strong>not</strong> serve as trustee at any age</li>
+      </ul>
+    </div>
+    <div class="card teal-accent">
+      <div class="card-label">Landon C. Murray 2025 Trust</div>
+      <div class="card-title">Landon's IRA Trust</div>
+      <ul>
+        <li><strong>Grantor &amp; Initial Trustee:</strong> Mark E. Murray</li>
+        <li><strong>Primary Beneficiary:</strong> Landon, with welfare priority over principal preservation</li>
+        <li><strong>Distribution Standard:</strong> Sole discretion of Trustee — no mandatory distributions to Landon at any age</li>
+        <li><strong>Self-Trusteeship:</strong> Co-Trustee at 30, sole Trustee at 35</li>
+      </ul>
+    </div>
+    <div class="card teal-accent">
+      <div class="card-label">Blakely C. Murray 2025 Trust</div>
+      <div class="card-title">Blakely's IRA Trust</div>
+      <ul>
+        <li><strong>Grantor &amp; Initial Trustee:</strong> Mark E. Murray</li>
+        <li><strong>Primary Beneficiary:</strong> Blakely, with welfare priority over principal preservation</li>
+        <li><strong>Distribution Standard:</strong> Sole discretion of Trustee — no mandatory distributions to Blakely at any age</li>
+        <li><strong>Self-Trusteeship:</strong> Co-Trustee at 30, sole Trustee at 35</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- How They Work -->
+<section>
+<div class="container">
+  <div class="section-label">Mechanics</div>
+  <h2 class="section-title">How the IRA Trusts Work</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Dormant Until Funded</div>
+      <div class="card-title">$10 Initial Gift</div>
+      <p>Each trust is funded with only $10 at creation. The trusts are effectively dormant until retirement plan assets are added — either during Mark's lifetime or at his death via beneficiary designation. If no assets beyond the $10 are ever added, the trust automatically terminates at Mark's death and the $10 is paid to the Trustee as a termination fee (Item II(c)).</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Irrevocability Triggers</div>
+      <div class="card-title">Three Triggering Events</div>
+      <p>Each trust becomes irrevocable upon the first of: (i) Mark's primary care physician determines he is under legal disability, (ii) Mark's death, or (iii) Mark's written amendment waiving his right to revoke. Until then, Mark retains full power to amend or revoke (Item I).</p>
+    </div>
+    <div class="card">
+      <div class="card-label">RMD Compliance</div>
+      <div class="card-title">Required Minimum Distributions</div>
+      <p>The Trustee must receive all required minimum distributions from the retirement plan, but is <strong>not</strong> required to pass those distributions through to the beneficiary (Item IV(a)). The Trustee receives the RMD into the trust and then exercises discretion on whether and how much to distribute to the beneficiary. The Trustee may also accelerate distributions beyond the RMD if in the beneficiary's best interest (Item XII).</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Distribution Priority</div>
+      <div class="card-title">Welfare Over Preservation</div>
+      <p>Mark's express intent across all three trusts is that each child's welfare be provided for <strong>as well as possible</strong>, rather than preserving principal for future generations. The Trustee is directed to be guided by this consideration when determining distribution amounts (Item IV(a)).</p>
+    </div>
+  </div>
+
+  <div class="callout blue">
+    <p><strong>Designated Beneficiary Compliance:</strong> All three trusts include specific provisions (Item IV(b), IV(c)(2)) ensuring that any exercise of the power of appointment involving retirement plan assets is limited to trusts that qualify as "designated beneficiaries" under IRC §401(a)(9). This preserves the ability to stretch distributions over the beneficiary's life expectancy where permitted by law.</p>
+  </div>
+</div>
+</section>
+
+<!-- After Primary Beneficiary's Death -->
+<section>
+<div class="container">
+  <div class="section-label">Succession</div>
+  <h2 class="section-title">After the Primary Beneficiary's Death</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Power of Appointment</div>
+      <div class="card-title">Limited Power — During Life or at Death</div>
+      <p>Each child holds a <strong>limited power of appointment</strong> exercisable by written instrument during life or by will at death. They may direct trust assets to any descendant of Mark who is assigned to a younger generation for GSTT purposes. They may <strong>not</strong> appoint to themselves, their estate, their creditors, or the creditors of their estate.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Default Distribution</div>
+      <div class="card-title">Per Stirpes to Descendants</div>
+      <p>If the power of appointment is not exercised, remaining trust assets divide <strong>per stirpes</strong> into separate trusts for the deceased child's living descendants. If the child has no living descendants, assets divide per stirpes among Mark's other living descendants. If Mark has no surviving descendants, assets split 50/50 between Mark's heirs and Claire's heirs under Georgia intestacy law.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <div class="card-label">Successor Trust Distributions</div>
+    <div class="card-title">Mandatory Age-Based Payouts for Next-Generation Trusts</div>
+    <p>When trust assets pass to the next generation (trusts created under Item IV(c) for descendants), those successor trusts include a <strong>mandatory distribution schedule</strong> that does not apply to Eli, Landon, or Blakely's own trusts:</p>
+    <ul>
+      <li><strong>Age 35:</strong> Trustee distributes <strong>one-third (1/3)</strong> of the trust to the beneficiary</li>
+      <li><strong>Age 45:</strong> Trustee distributes <strong>one-half (1/2)</strong> of remaining trust assets</li>
+      <li><strong>Age 65:</strong> Trustee distributes <strong>all</strong> remaining trust assets outright</li>
+    </ul>
+    <p style="margin-top:12px; color:var(--text-dim);">This schedule applies only to trusts created for the grandchildren's generation and beyond — not to Eli, Landon, or Blakely's primary trusts, which have no forced distributions at any age.</p>
+  </div>
+</div>
+</section>
+
+<!-- Comparison Table -->
+<section>
+<div class="container">
+  <div class="section-label">Comparison</div>
+  <h2 class="section-title">IRA Trust Comparison — Eli vs. Landon &amp; Blakely</h2>
+  <p class="section-intro">All three IRA trusts are structurally identical except for the provisions highlighted below.</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Eli's Trust</th>
+        <th>Landon's &amp; Blakely's Trusts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="feature-label">Distribution Standard</td>
+        <td>Sole discretion — welfare priority</td>
+        <td class="match">Sole discretion — welfare priority</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Mandatory Distributions to Primary Beneficiary</td>
+        <td>None at any age</td>
+        <td class="match">None at any age</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Self-Trusteeship</td>
+        <td class="diff">Excluded — Eli may never serve as Trustee</td>
+        <td>Co-Trustee at age 30; sole Trustee at age 35</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Power of Appointment</td>
+        <td>Limited — to Mark's descendants (younger GSTT generation)</td>
+        <td class="match">Limited — to Mark's descendants (younger GSTT generation)</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Successor Trustee Chain</td>
+        <td>Claire → Cherie &amp; Joshua → Tiffany</td>
+        <td class="match">Claire → Cherie &amp; Joshua → Tiffany</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Corporate Trustee Requirement</td>
+        <td>$1B+ AUM minimum</td>
+        <td class="match">$1B+ AUM minimum</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Vacancy Appointment (if no primary beneficiary eligible)</td>
+        <td class="diff">Eli excluded from appointing successor Trustee</td>
+        <td>Primary beneficiary may appoint</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Corporate Trustee Removal Power</td>
+        <td class="diff">Eli excluded from exercising removal power</td>
+        <td>Primary beneficiary may remove &amp; replace</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Spendthrift Protection</td>
+        <td>Full — creditor holdback (Item V)</td>
+        <td class="match">Full — creditor holdback (Item V)</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Perpetuities Term</td>
+        <td>360 years (Georgia maximum)</td>
+        <td class="match">360 years (Georgia maximum)</td>
+      </tr>
+      <tr>
+        <td class="feature-label">RMD Handling</td>
+        <td>Trustee receives; distribution is discretionary</td>
+        <td class="match">Trustee receives; distribution is discretionary</td>
+      </tr>
+      <tr>
+        <td class="feature-label">Governing Law</td>
+        <td>Georgia (with situs change power)</td>
+        <td class="match">Georgia (with situs change power)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 5: FIDUCIARIES                                            -->
+<!-- ============================================================ -->
+<div id="fiduciaries" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">Fiduciaries</div>
+  <h2 class="section-title">Fiduciary Appointments</h2>
+  <p class="section-intro">The same succession of fiduciaries applies across the estate planning documents — both Wills, both Revocable Trusts, and all three IRA Trusts. The surviving spouse steps in first, followed by two trusted individuals jointly, then a final backstop. The Healthcare Directives and Durable Powers of Attorney follow a separate agent structure (see Healthcare &amp; POA tab).</p>
+
+  <div class="flow-container">
+    <div class="flow-title">Fiduciary Succession — All Documents</div>
+    <svg viewBox="0 0 940 520" xmlns="http://www.w3.org/2000/svg" style="max-width:940px;width:100%;">
+      <!-- Column headers -->
+      <rect x="20" y="10" width="175" height="36" rx="4" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <text x="107" y="33" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#c9a84c" letter-spacing="1.5" text-transform="uppercase">EXECUTOR / TRUSTEE</text>
+      <text x="107" y="56" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Wills · Rev Trusts · IRA Trusts</text>
+
+      <rect x="215" y="10" width="150" height="36" rx="4" fill="rgba(58,154,138,0.12)" stroke="rgba(58,154,138,0.4)" stroke-width="1"/>
+      <text x="290" y="33" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3a9a8a" letter-spacing="1.5">GUARDIAN</text>
+      <text x="290" y="56" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Wills (Minors)</text>
+
+      <rect x="385" y="10" width="150" height="36" rx="4" fill="rgba(58,123,213,0.12)" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <text x="460" y="33" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3a7bd5" letter-spacing="1.5">HC AGENT</text>
+      <text x="460" y="56" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Advance Directives</text>
+
+      <rect x="555" y="10" width="150" height="36" rx="4" fill="rgba(122,90,192,0.12)" stroke="rgba(122,90,192,0.4)" stroke-width="1"/>
+      <text x="630" y="33" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#7a5ac0" letter-spacing="1.5">POA AGENT</text>
+      <text x="630" y="56" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Financial Powers</text>
+
+      <!-- Landon/Blakely self-trustee column -->
+      <rect x="725" y="10" width="195" height="36" rx="4" fill="rgba(201,168,76,0.06)" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+      <text x="822" y="27" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#c9a84c" letter-spacing="1.5">SELF-TRUSTEE</text>
+      <text x="822" y="42" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Landon &amp; Blakely Only</text>
+
+      <!-- Row labels -->
+      <text x="8" y="105" text-anchor="start" font-family="IBM Plex Mono,monospace" font-size="9" fill="#555" transform="rotate(-90,8,105)">1ST</text>
+      <text x="8" y="195" text-anchor="start" font-family="IBM Plex Mono,monospace" font-size="9" fill="#555" transform="rotate(-90,8,195)">2ND</text>
+      <text x="8" y="285" text-anchor="start" font-family="IBM Plex Mono,monospace" font-size="9" fill="#555" transform="rotate(-90,8,285)">3RD</text>
+      <text x="8" y="375" text-anchor="start" font-family="IBM Plex Mono,monospace" font-size="9" fill="#555" transform="rotate(-90,8,375)">4TH</text>
+
+      <!-- ROW 1: Primary -->
+      <rect x="20" y="75" width="175" height="52" rx="5" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.5"/>
+      <text x="107" y="97" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#f0f0f0" font-weight="600">Surviving Spouse</text>
+      <text x="107" y="115" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Claire ↔ Mark</text>
+
+      <rect x="215" y="75" width="150" height="52" rx="5" fill="#1a1e28" stroke="#3a9a8a" stroke-width="1.5"/>
+      <text x="290" y="97" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#f0f0f0" font-weight="600">Cherie Griffith</text>
+      <text x="290" y="115" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Guardian + Conservator</text>
+
+      <rect x="385" y="75" width="150" height="52" rx="5" fill="#1a1e28" stroke="#3a7bd5" stroke-width="1.5"/>
+      <text x="460" y="97" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#f0f0f0" font-weight="600">Spouse</text>
+      <text x="460" y="115" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Claire ↔ Mark</text>
+
+      <rect x="555" y="75" width="150" height="52" rx="5" fill="#1a1e28" stroke="#7a5ac0" stroke-width="1.5"/>
+      <text x="630" y="97" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#f0f0f0" font-weight="600">Spouse</text>
+      <text x="630" y="115" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Claire ↔ Mark</text>
+
+      <rect x="725" y="75" width="195" height="52" rx="5" fill="#1a1e28" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <text x="822" y="97" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#f0f0f0" font-weight="600">Age 30: Co-Trustee</text>
+      <text x="822" y="115" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Eli excluded</text>
+
+      <!-- Arrows row 1→2 -->
+      <line x1="107" y1="127" x2="107" y2="160" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="103,158 111,158 107,165" fill="#3a4050"/>
+      <line x1="290" y1="127" x2="290" y2="160" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="286,158 294,158 290,165" fill="#3a4050"/>
+      <line x1="822" y1="127" x2="822" y2="160" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="818,158 826,158 822,165" fill="#3a4050"/>
+
+      <!-- ROW 2: Secondary -->
+      <rect x="20" y="165" width="175" height="52" rx="5" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="107" y="185" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4d4d4" font-weight="600">Cherie &amp; Joshua</text>
+      <text x="107" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Jointly, or survivor</text>
+
+      <rect x="215" y="165" width="150" height="52" rx="5" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="290" y="185" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4d4d4" font-weight="600">Joshua Truppman</text>
+      <text x="290" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">If Cherie cannot serve</text>
+
+      <!-- HC & POA: GAP -->
+      <rect x="385" y="165" width="150" height="52" rx="5" fill="rgba(204,0,0,0.06)" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="460" y="189" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#cc0000" font-weight="500">NO BACK-UP</text>
+      <text x="460" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#991a1a">Not yet designated</text>
+
+      <rect x="555" y="165" width="150" height="52" rx="5" fill="rgba(204,0,0,0.06)" stroke="#cc0000" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="630" y="189" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#cc0000" font-weight="500">NO BACK-UP</text>
+      <text x="630" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#991a1a">Not yet designated</text>
+
+      <rect x="725" y="165" width="195" height="52" rx="5" fill="#1a1e28" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+      <text x="822" y="185" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4d4d4" font-weight="600">Age 35: Sole Trustee</text>
+      <text x="822" y="205" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Eli excluded</text>
+
+      <!-- Arrows row 2→3 -->
+      <line x1="107" y1="217" x2="107" y2="250" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="103,248 111,248 107,255" fill="#3a4050"/>
+
+      <!-- ROW 3: Tertiary -->
+      <rect x="20" y="255" width="175" height="52" rx="5" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="107" y="277" text-anchor="middle" font-family="Playfair Display,serif" font-size="12" fill="#d4d4d4" font-weight="600">Tiffany Matalon</text>
+      <text x="107" y="295" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">If both Cherie &amp; Joshua fail</text>
+
+      <!-- Guardian ends -->
+      <rect x="215" y="255" width="150" height="36" rx="5" fill="rgba(58,154,138,0.06)" stroke="rgba(58,154,138,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="290" y="278" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#555">Chain ends</text>
+
+      <!-- Arrows row 3→4 -->
+      <line x1="107" y1="307" x2="107" y2="340" stroke="#3a4050" stroke-width="1.5"/>
+      <polygon points="103,338 111,338 107,345" fill="#3a4050"/>
+
+      <!-- ROW 4: Backstop -->
+      <rect x="20" y="345" width="175" height="52" rx="5" fill="#1a1e28" stroke="#2a3040" stroke-width="1"/>
+      <text x="107" y="365" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" fill="#d4d4d4" font-weight="600">Beneficiaries Appoint</text>
+      <text x="107" y="383" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Must be independent; corp</text>
+      <text x="107" y="393" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">trustee requires $1B+ AUM</text>
+
+      <!-- Disclaimer bar -->
+      <rect x="20" y="430" width="900" height="40" rx="4" fill="rgba(204,0,0,0.06)" stroke="rgba(204,0,0,0.3)" stroke-width="1"/>
+      <text x="470" y="445" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#cc0000" font-weight="500">⚠ Surviving spouse may NOT serve as trustee of any trust funded by their own disclaimer (§2518 protection)</text>
+      <text x="470" y="461" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#991a1a">Healthcare &amp; POA successor agents are an open item — both documents currently have no back-up if the spouse cannot serve</text>
+
+      <!-- Eli exclusion note -->
+      <rect x="725" y="255" width="195" height="80" rx="5" fill="rgba(204,0,0,0.04)" stroke="rgba(204,0,0,0.3)" stroke-width="1"/>
+      <text x="822" y="280" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#cc0000" letter-spacing="1">ELI EXCLUDED</text>
+      <text x="822" y="298" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">Cannot serve as trustee</text>
+      <text x="822" y="313" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">of his own trust at any</text>
+      <text x="822" y="328" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#8a8f9a">age — all documents</text>
+    </svg>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-title">Executor (Will) &amp; Trustee (All Trusts)</div>
+      <table class="fid-table">
+        <tr>
+          <th>#</th>
+          <th>Fiduciary</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td class="role-num">1st</td>
+          <td><strong>Surviving Spouse</strong></td>
+          <td>Claire (for Mark's docs) / Mark (for Claire's docs)</td>
+        </tr>
+        <tr>
+          <td class="role-num">2nd</td>
+          <td><strong>Cherie Griffith &amp; Joshua Truppman</strong></td>
+          <td>Jointly, or the survivor of them</td>
+        </tr>
+        <tr>
+          <td class="role-num">3rd</td>
+          <td><strong>Tiffany Matalon</strong></td>
+          <td>Successor if both Griffith &amp; Truppman cannot serve</td>
+        </tr>
+        <tr>
+          <td class="role-num">4th</td>
+          <td><strong>Beneficiaries appoint</strong></td>
+          <td>Most senior generation of beneficiaries may select; must be a bank or trust company with $1B+ AUM</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <div class="col-title">Guardian &amp; Conservator (Minors)</div>
+      <table class="fid-table">
+        <tr>
+          <th>#</th>
+          <th>Guardian</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td class="role-num">1st</td>
+          <td><strong>Cherie Griffith</strong></td>
+          <td>Testamentary Guardian + Conservator (GA Code §29-2-4 / §29-3-5)</td>
+        </tr>
+        <tr>
+          <td class="role-num">2nd</td>
+          <td><strong>Joshua Truppman</strong></td>
+          <td>If Griffith ceases or fails to serve</td>
+        </tr>
+      </table>
+      <div class="callout" style="margin-top:20px;">
+        <p><strong>No bond required.</strong> Both Wills waive the requirement for any accounting, bond, or other security for the guardian/conservator.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <div class="card-label">Beneficiary Self-Trusteeship (Revocable Trust + IRA Trusts)</div>
+    <div class="card-title">Landon &amp; Blakely — Trustee Graduation Rights</div>
+    <p>Landon and Blakely (but <strong>not</strong> Eli) each have the option to step into the trustee role over their own trusts — both their Descendant's Trust under the Revocable Trust and their standalone IRA Trust:</p>
+    <ul>
+      <li><strong>Age 30:</strong> May elect to become <strong>co-trustee</strong> alongside the existing trustee</li>
+      <li><strong>Age 35:</strong> May elect to become <strong>sole trustee</strong>, replacing the existing trustee</li>
+    </ul>
+    <p style="margin-top:12px;">While serving as their own trustee, distributions to themselves are limited to the support and education standard (accustomed manner of living). They may appoint a co-trustee who can exercise broader discretionary distribution powers on their behalf.</p>
+  </div>
+</div>
+</section>
+
+<!-- Trustee Power Limitations -->
+<section>
+<div class="container">
+  <div class="section-label">Limitations</div>
+  <h2 class="section-title">Trustee Power Limitations</h2>
+  <p class="section-intro">When a beneficiary also serves as trustee, their powers are deliberately restricted to avoid adverse estate tax consequences. These limitations apply consistently across both Revocable Trusts and all three IRA Trusts.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Surviving Spouse as Trustee</div>
+      <div class="card-title">HEMS Standard Applies</div>
+      <p>While serving as trustee of the Family Trust (Article V), the surviving spouse may only make discretionary distributions to the extent necessary for a beneficiary's <strong>health, maintenance, education, or support in reasonable comfort</strong>. A co-trustee may exercise broader powers. The spouse also cannot distribute to satisfy personal support obligations owed to another person.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Beneficiary as Trustee</div>
+      <div class="card-title">Self-Distribution Restrictions</div>
+      <p>Any individual trustee who is also a beneficiary is limited to support and education distributions to themselves, cannot exercise incidents of ownership over insurance on their own life held in the trust, and cannot distribute to discharge personal support obligations. These restrictions prevent trust assets from being included in the trustee-beneficiary's taxable estate.</p>
+    </div>
+  </div>
+
+  <div class="callout blue">
+    <p><strong>Workaround Built In:</strong> The trusts are designed so that a beneficiary serving as trustee can appoint a co-trustee who is <em>not</em> subject to these limitations. The co-trustee can then exercise full discretionary distribution power on the beneficiary's behalf — providing access to trust assets while preserving the estate tax protection.</p>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 6: KEY FEATURES                                           -->
+<!-- ============================================================ -->
+<div id="features" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">Features</div>
+  <h2 class="section-title">Key Trust Features &amp; Protections</h2>
+
+  <div class="card-grid cols-3">
+    <div class="card">
+      <div class="card-label">Dynasty Structure</div>
+      <div class="card-title">360-Year Trust Term</div>
+      <p>Georgia permits trusts lasting up to 360 years from the grantor's death. All trusts under this plan — both Revocable Trusts and all three IRA Trusts — use that maximum term, allowing multi-generational wealth preservation.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Creditor Protection</div>
+      <div class="card-title">Spendthrift Clause</div>
+      <p>Beneficiary interests cannot be transferred, assigned, or reached by creditors. If a creditor blocks distribution, the trustee holds and accumulates until direct distribution becomes possible.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Age Protection</div>
+      <div class="card-title">Holdback Trust Under Age 30</div>
+      <p>The trustee may withhold any distribution to an individual under age 30, holding assets in trust with discretionary distributions until the recipient reaches that age.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Survivorship</div>
+      <div class="card-title">90-Day Survival Requirement</div>
+      <p>Under the Revocable Trusts, a beneficiary must survive the grantor (or other triggering event) by at least 90 days to inherit. This prevents assets from passing through a beneficiary's estate if both spouses die in close succession.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Tax Optimization</div>
+      <div class="card-title">Portability Election</div>
+      <p>Both Wills direct the executor to elect portability — transferring the deceased spouse's unused federal estate tax exemption to the surviving spouse's estate, maximizing the combined exemption amount.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Flexibility</div>
+      <div class="card-title">Special Power of Appointment</div>
+      <p>Each primary beneficiary can redirect trust assets at death to the grantor's descendants, qualified charities, or a Spousal Trust — providing flexibility for future circumstances.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Investment</div>
+      <div class="card-title">Diversification Waiver</div>
+      <p>The grantor expressly waives the trustee's duty to diversify concentrated positions, permitting the trustee to retain concentrated holdings without liability for failing to sell.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Disclosure</div>
+      <div class="card-title">Information Waiver</div>
+      <p>The trustee has no duty to notify beneficiaries of the trust's existence or provide accountings. Disclosure is at the trustee's discretion. The IRA Trusts similarly exempt the Trustee from O.C.G.A. §53-12-242 (existence notification) and §53-12-243 (reporting).</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Efficiency</div>
+      <div class="card-title">Small Trust Termination</div>
+      <p>If any trust's fair market value falls below <strong>$100,000</strong> (Article X(l)), the trustee may terminate it and distribute outright to the income beneficiaries in equal shares.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Age-Based Timeline -->
+<section>
+<div class="container">
+  <div class="section-label">Timeline</div>
+  <h2 class="section-title">Age-Based Provisions Timeline</h2>
+  <p class="section-intro">Key provisions activate at specific ages. The top track shows Landon and Blakely's trustee graduation path. The bottom track shows Eli's provisions (no trustee graduation, lifetime residence right). The grandchild payout schedule (bottom) applies only to the next generation — Eli, Landon, and Blakely have no forced distributions at any age.</p>
+
+  <div class="flow-container">
+    <svg viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg" style="max-width:900px;width:100%;">
+
+      <!-- Main timeline axis -->
+      <line x1="60" y1="175" x2="860" y2="175" stroke="#2a3040" stroke-width="2"/>
+
+      <!-- Age markers on axis -->
+      <line x1="140" y1="168" x2="140" y2="182" stroke="#3a4050" stroke-width="2"/>
+      <text x="140" y="200" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#c9a84c" font-weight="500">25</text>
+
+      <line x1="300" y1="168" x2="300" y2="182" stroke="#3a4050" stroke-width="2"/>
+      <text x="300" y="200" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#c9a84c" font-weight="500">30</text>
+
+      <line x1="460" y1="168" x2="460" y2="182" stroke="#3a4050" stroke-width="2"/>
+      <text x="460" y="200" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#c9a84c" font-weight="500">35</text>
+
+      <line x1="620" y1="168" x2="620" y2="182" stroke="#3a4050" stroke-width="2"/>
+      <text x="620" y="200" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#c9a84c" font-weight="500">45</text>
+
+      <line x1="780" y1="168" x2="780" y2="182" stroke="#3a4050" stroke-width="2"/>
+      <text x="780" y="200" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#c9a84c" font-weight="500">65</text>
+
+      <!-- ============ TOP TRACK: LANDON & BLAKELY ============ -->
+      <text x="60" y="28" font-family="IBM Plex Mono,monospace" font-size="10" fill="#7a5ac0" letter-spacing="2">LANDON &amp; BLAKELY</text>
+
+      <!-- Age 25: Division Date -->
+      <line x1="140" y1="168" x2="140" y2="80" stroke="rgba(201,168,76,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      <rect x="60" y="40" width="160" height="40" rx="5" fill="#1a1e28" stroke="#c9a84c" stroke-width="1.2"/>
+      <text x="140" y="57" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#f0f0f0" font-weight="600">Division Date</text>
+      <text x="140" y="72" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Family Trust splits</text>
+
+      <!-- Age 30: Co-Trustee -->
+      <line x1="300" y1="168" x2="300" y2="80" stroke="rgba(122,90,192,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      <rect x="220" y="40" width="160" height="40" rx="5" fill="#1a1e28" stroke="#7a5ac0" stroke-width="1.2"/>
+      <text x="300" y="57" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#f0f0f0" font-weight="600">Co-Trustee Eligible</text>
+      <text x="300" y="72" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Rev Trust + IRA Trust</text>
+
+      <!-- Age 35: Sole Trustee -->
+      <line x1="460" y1="168" x2="460" y2="80" stroke="rgba(122,90,192,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+      <rect x="380" y="40" width="160" height="40" rx="5" fill="#1a1e28" stroke="#7a5ac0" stroke-width="1.2"/>
+      <text x="460" y="57" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#f0f0f0" font-weight="600">Sole Trustee Eligible</text>
+      <text x="460" y="72" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Rev Trust + IRA Trust</text>
+
+      <!-- No mandatory distributions label -->
+      <rect x="570" y="40" width="290" height="40" rx="5" fill="rgba(58,154,138,0.06)" stroke="rgba(58,154,138,0.3)" stroke-width="1"/>
+      <text x="715" y="57" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#3a9a8a" font-weight="500">No forced distributions at any age</text>
+      <text x="715" y="72" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#8a8f9a">Primary trust stays in trust for life</text>
+
+      <!-- Arrow connecting Landon/Blakely progression -->
+      <line x1="220" y1="60" x2="220" y2="60" stroke="#7a5ac0" stroke-width="1"/>
+      <rect x="139" y="89" width="322" height="3" rx="1" fill="rgba(122,90,192,0.2)"/>
+      <text x="300" y="107" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#555">Trustee graduation window</text>
+
+      <!-- ============ BOTTOM TRACK: ELI ============ -->
+      <text x="60" y="240" font-family="IBM Plex Mono,monospace" font-size="10" fill="#cc0000" letter-spacing="2">ELI</text>
+
+      <!-- Eli: Lifetime residence bar -->
+      <rect x="60" y="252" width="800" height="28" rx="4" fill="rgba(58,154,138,0.08)" stroke="rgba(58,154,138,0.4)" stroke-width="1"/>
+      <text x="460" y="271" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="11" fill="#3a9a8a" font-weight="500">Lifetime Residence Right — rent-free in trust-owned real property (Family Trust → Residence Trust)</text>
+
+      <!-- Eli: No trustee bar -->
+      <rect x="60" y="288" width="800" height="24" rx="4" fill="rgba(204,0,0,0.05)" stroke="rgba(204,0,0,0.25)" stroke-width="1"/>
+      <text x="460" y="305" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#991a1a">No trustee graduation — independent trustee manages Eli's trusts at all ages</text>
+
+      <!-- Eli: No distributions -->
+      <rect x="60" y="320" width="800" height="24" rx="4" fill="rgba(58,154,138,0.04)" stroke="rgba(58,154,138,0.15)" stroke-width="1"/>
+      <text x="460" y="337" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="10" fill="#555">No forced distributions — trustee discretion, welfare priority over preservation</text>
+
+      <!-- ============ BOTTOM SECTION: GRANDCHILD SCHEDULE ============ -->
+      <text x="60" y="380" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3a7bd5" letter-spacing="2">NEXT GENERATION (GRANDCHILDREN)</text>
+
+      <!-- Grandchild payout markers -->
+      <line x1="460" y1="392" x2="460" y2="418" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <rect x="405" y="393" width="110" height="22" rx="3" fill="rgba(58,123,213,0.1)" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <text x="460" y="408" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3a7bd5">⅓ distributed</text>
+
+      <line x1="620" y1="392" x2="620" y2="418" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <rect x="565" y="393" width="110" height="22" rx="3" fill="rgba(58,123,213,0.1)" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <text x="620" y="408" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3a7bd5">½ of balance</text>
+
+      <line x1="780" y1="392" x2="780" y2="418" stroke="rgba(58,123,213,0.4)" stroke-width="1"/>
+      <rect x="720" y="393" width="120" height="22" rx="3" fill="rgba(58,123,213,0.15)" stroke="rgba(58,123,213,0.5)" stroke-width="1"/>
+      <text x="780" y="408" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#3a7bd5">All remaining</text>
+
+      <!-- Grandchild payout bar -->
+      <rect x="459" y="420" width="322" height="3" rx="1" fill="rgba(58,123,213,0.2)"/>
+      <text x="620" y="438" text-anchor="middle" font-family="IBM Plex Sans,sans-serif" font-size="9" fill="#555">Mandatory payout schedule — grandchild trusts only (IRA Trusts Item IV(c))</text>
+    </svg>
+  </div>
+</div>
+</section>
+
+<!-- Incapacity -->
+<section>
+<div class="container">
+  <div class="section-label">Incapacity</div>
+  <h2 class="section-title">Incapacity &amp; Lifetime Administration</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">During Lifetime</div>
+      <div class="card-title">Full Grantor Control</div>
+      <p>While competent, each grantor retains complete control — directing all income and principal distributions, and retaining the power to revoke or amend the trust at any time for any reason. This applies to both the Revocable Trusts and the IRA Trusts.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Incapacity Trigger</div>
+      <div class="card-title">Layered Determination Process</div>
+      <p>For the <strong>Revocable Trusts</strong>, incapacity is determined by a layered process (Article XIV(c)): <strong>first</strong> the grantor's spouse; <strong>then</strong> a majority of the grantor's adult children; <strong>then</strong> the grantor's primary care physician. No court proceeding is required.</p>
+      <p style="margin-top:8px;">For the <strong>IRA Trusts</strong>, incapacity is determined solely by the grantor's primary care physician (Item III(a)(i)). Upon incapacity, the grantor cannot revoke or amend and is deemed to have automatically resigned as Trustee.</p>
+    </div>
+    <div class="card" style="grid-column: span 2;">
+      <div class="card-label">Incapacity Management</div>
+      <div class="card-title">Trustee Discretion for Spouse, Descendants &amp; Gifting</div>
+      <p>During incapacity under the Revocable Trusts, the trustee may distribute income and principal for the benefit of the grantor, the grantor's spouse, and any descendants. The trustee may also continue any established gifting program on the grantor's behalf. If a court-appointed guardian exists, the guardian has no power over trust assets — only the trustee controls them.</p>
+      <p style="margin-top:8px;">Under the IRA Trusts, the successor trustee (Claire, then Cherie &amp; Joshua) assumes management with the same discretionary distribution powers for the named child beneficiary and their descendants.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Grantor Trust Restrictions -->
+<section>
+<div class="container">
+  <div class="section-label">Tax Safeguards</div>
+  <h2 class="section-title">Grantor Trust Restrictions (IRA Trusts)</h2>
+  <p class="section-intro">All three IRA Trusts include identical provisions (Item VI) that prevent the trusts from being treated as grantor trusts for income tax purposes after they become irrevocable. These restrictions ensure that retirement plan distributions are taxed to the trust or its beneficiaries — not to Mark or Claire.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">No Self-Dealing</div>
+      <div class="card-title">Adequate Consideration Required</div>
+      <p>No trustee may deal with trust property for less than adequate consideration (Item VI(a)), and no contributor or their spouse may borrow from the trust without adequate interest and security (Item VI(b)).</p>
+    </div>
+    <div class="card">
+      <div class="card-label">No Insurance on Grantor</div>
+      <div class="card-title">Life Insurance Prohibition</div>
+      <p>Trust assets may not be used to purchase or pay premiums on insurance on the life of any contributor or their spouse (Item VI(c)).</p>
+    </div>
+    <div class="card" style="grid-column: span 2;">
+      <div class="card-label">No Distributions to Grantor</div>
+      <div class="card-title">Complete Wall Between Grantor &amp; Trust</div>
+      <p>After irrevocability, no trust income or principal may be distributed to or for the benefit of Mark (or Claire as his spouse), nor may any distribution satisfy their personal support obligations (Item VI(d)). This creates a complete wall between the grantor and the trust assets, ensuring the trust is a separate taxpayer.</p>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 7: HEALTHCARE DIRECTIVES & POWERS OF ATTORNEY             -->
+<!-- ============================================================ -->
+<div id="healthcare" class="tab-panel">
+
+<section>
+<div class="container">
+  <div class="section-label">Healthcare Directives</div>
+  <h2 class="section-title">Advance Directives for Health Care</h2>
+  <p class="section-intro">Both Mark and Claire have executed Georgia Advance Directives for Health Care &mdash; statutory four-part forms that designate a health care agent, express treatment preferences, nominate a guardian, and take effect when the declarant is unable or chooses not to make their own health care decisions.</p>
+
+  <div class="callout">
+    <p><strong>Reciprocal Structure:</strong> Each spouse names the other as their primary health care agent. The documents are mirror images &mdash; identical in scope, powers, and structure &mdash; with only the grantor and agent roles swapped.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card highlight">
+      <div class="card-label">Mark E. Murray &mdash; Health Care Agent</div>
+      <div class="card-title">Claire C. Murray</div>
+      <p>Claire is authorized to make all health care decisions for Mark when he is unable to communicate or chooses to delegate. This includes admitting or discharging from any facility, consenting to or withdrawing any treatment, and contracting for health care services.</p>
+    </div>
+    <div class="card highlight">
+      <div class="card-label">Claire C. Murray &mdash; Health Care Agent</div>
+      <div class="card-title">Mark E. Murray</div>
+      <p>Mark is authorized to make all health care decisions for Claire when she is unable to communicate or chooses to delegate. This includes admitting or discharging from any facility, consenting to or withdrawing any treatment, and contracting for health care services.</p>
+    </div>
+  </div>
+
+  <div class="card alert" style="margin-top:20px;">
+    <div class="card-label">Open Item — Both Directives</div>
+    <div class="card-title">No Back-Up Health Care Agents Named</div>
+    <p>Neither directive designates a successor health care agent. If the primary agent (the other spouse) is unavailable, unable, or unwilling to act &mdash; including in a common accident scenario &mdash; there is no named back-up to step in without a court proceeding. <strong>Consider whether Landon, Blakely, or another trusted person should be named as back-up agent for each spouse.</strong></p>
+  </div>
+
+  <!-- Agent Powers -->
+  <h2 class="section-title" style="margin-top:48px;">Health Care Agent Powers</h2>
+  <p class="section-intro">Both directives grant the same broad set of powers to the health care agent. These powers are effective during incapacity and, in certain respects, continue after death.</p>
+
+  <div class="card-grid cols-3">
+    <div class="card">
+      <div class="card-label">During Incapacity</div>
+      <div class="card-title">Full Medical Authority</div>
+      <p>The agent has the same authority to make any health care decision the principal could make &mdash; including facility admission/discharge, treatment consent or refusal, and contracting for services. The agent is not personally liable for costs.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Privacy</div>
+      <div class="card-title">HIPAA Access</div>
+      <p>The agent serves as the principal's personal representative under HIPAA and all federal/state medical privacy law, with the same access to medical records as the principal and the authority to disclose records to others for ongoing care.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Access</div>
+      <div class="card-title">Visitation &amp; Transport</div>
+      <p>The agent may accompany the principal in an ambulance or air ambulance (if protocol permits) and may visit or consult in person at any facility.</p>
+    </div>
+  </div>
+
+  <div class="card-grid cols-3" style="margin-top:4px;">
+    <div class="card">
+      <div class="card-label">After Death</div>
+      <div class="card-title">Autopsy Authorization</div>
+      <p>Unless limited by initialing, the agent has authority to authorize an autopsy. Neither Mark nor Claire has initialed a limitation &mdash; both agents retain this power.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">After Death</div>
+      <div class="card-title">Organ &amp; Body Donation</div>
+      <p>Unless limited by initialing, the agent may make disposition of the body for medical purposes under the Georgia Revised Uniform Anatomical Gift Act. No limitations initialed by either spouse.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">After Death</div>
+      <div class="card-title">Final Disposition</div>
+      <p>Unless limited by initialing, the agent decides burial vs. cremation and other final arrangements. No limitations initialed &mdash; the surviving spouse has full authority over final disposition.</p>
+    </div>
+  </div>
+
+  <!-- Treatment Preferences -->
+  <h2 class="section-title" style="margin-top:48px;">Treatment Preferences &amp; Guardianship</h2>
+
+  <div class="card-grid">
+    <div class="card blue-accent">
+      <div class="card-label">Part Two — Both Directives</div>
+      <div class="card-title">Treatment Preferences — Not Yet Completed</div>
+      <p>Neither Mark nor Claire has initialed any treatment preference options in Part Two. This means there are no express instructions on file regarding end-of-life treatment (extend life vs. natural death vs. selective interventions) if either spouse is in a terminal condition or state of permanent unconsciousness. The health care agent will use their judgment guided by past conversations, beliefs, and values.</p>
+      <p style="margin-top:10px;"><strong>Recommendation:</strong> Both spouses should discuss their treatment preferences with their attorney and each other, and initial the appropriate options in Part Two before signing.</p>
+    </div>
+    <div class="card blue-accent">
+      <div class="card-label">Part Three — Both Directives</div>
+      <div class="card-title">Guardianship Nominations — Not Yet Completed</div>
+      <p>Neither directive contains a guardianship nomination. If a court determines a guardian is needed, there is no express preference on record. The health care agent retains priority over a guardian for health care decisions unless a court determines otherwise.</p>
+      <p style="margin-top:10px;"><strong>Recommendation:</strong> Consider nominating the health care agent (the other spouse) or another trusted person as guardian in Part Three.</p>
+    </div>
+  </div>
+
+  <div class="callout red">
+    <p><strong>Draft Status:</strong> These are draft documents &mdash; neither has been signed, dated, or witnessed. Both directives require the declarant's signature and the signatures of two witnesses (who must be at least 18, of sound mind, and not the named health care agent or a person who will inherit from the declarant). Notarization is <strong>not</strong> required under Georgia law.</p>
+  </div>
+
+  <!-- Georgia Law Limitations -->
+  <div class="card" style="margin-top:20px;">
+    <div class="card-label">Georgia Law Limitations</div>
+    <div class="card-title">What the Health Care Agent Cannot Do</div>
+    <p>Under Georgia law, a health care agent does <strong>not</strong> have the power to make decisions regarding:</p>
+    <ul>
+      <li><strong>Sterilization</strong></li>
+      <li><strong>Involuntary hospitalization</strong> or involuntary treatment for mental illness, developmental disability, or addictive disease</li>
+      <li>Any matter covered by a separate <strong>psychiatric advance directive</strong> under O.C.G.A. Chapter 11 of Title 37</li>
+    </ul>
+    <p style="margin-top:10px;">Additionally, a future <strong>divorce or annulment</strong> automatically revokes the selection of a current spouse as health care agent. A future marriage revokes a non-spouse agent unless that person becomes the new spouse.</p>
+  </div>
+</div>
+</section>
+
+<!-- Durable Powers of Attorney -->
+<section>
+<div class="container">
+  <div class="section-label">Financial Powers</div>
+  <h2 class="section-title">Durable Powers of Attorney</h2>
+  <p class="section-intro">Both Mark and Claire have executed Georgia Statutory Form Powers of Attorney under O.C.G.A. Chapter 6B of Title 10 &mdash; broad financial management documents that name the other spouse as agent with immediate effectiveness. Both were prepared by Duncan Spratt P.A.</p>
+
+  <div class="callout">
+    <p><strong>Reciprocal Structure:</strong> Each spouse names the other as primary agent with identical authority. Both documents are effective immediately (not springing) and both revoke all prior powers of attorney except health care directives, entity voting proxies, creditor-coupled powers, and government-prescribed forms.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card highlight">
+      <div class="card-label">Mark E. Murray &mdash; Agent</div>
+      <div class="card-title">Claire C. Murray</div>
+      <p>Claire is granted general authority over all fourteen O.C.G.A. subject areas (real property, personal property, stocks/bonds, banking, business operations, insurance, estates/trusts, claims/litigation, family maintenance, government benefits, retirement plans, taxes, and more).</p>
+    </div>
+    <div class="card highlight">
+      <div class="card-label">Claire C. Murray &mdash; Agent</div>
+      <div class="card-title">Mark E. Murray</div>
+      <p>Mark is granted general authority over all fourteen O.C.G.A. subject areas (real property, personal property, stocks/bonds, banking, business operations, insurance, estates/trusts, claims/litigation, family maintenance, government benefits, retirement plans, taxes, and more).</p>
+    </div>
+  </div>
+
+  <div class="card alert" style="margin-top:20px;">
+    <div class="card-label">Open Item — Both Powers of Attorney</div>
+    <div class="card-title">No Successor Agents Named</div>
+    <p>Neither document designates a successor agent or second successor agent. If the spouse-agent is unable or unwilling to act, there is no named back-up with financial management authority. <strong>Consider whether Landon, Blakely, or a professional fiduciary should be designated as successor agent.</strong></p>
+  </div>
+
+  <!-- Special Instructions -->
+  <h2 class="section-title" style="margin-top:48px;">Special Instructions</h2>
+  <p class="section-intro">Both powers of attorney include identical special instructions that expand and customize the agent's authority beyond the statutory defaults. These provisions are critical to the overall estate plan architecture.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Trust Integration</div>
+      <div class="card-title">Revocable Trust Management</div>
+      <p>The agent is authorized to transfer property into the grantor's Revocable Trust (the Mark E. Murray Revocable Trust or Claire C. Murray Revocable Trust, as applicable) and to exercise all retained rights to alter, amend, modify, or revoke that trust. This ensures the agent can fund and manage the trust during incapacity.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Gifting Authority</div>
+      <div class="card-title">Expanded Gift Powers</div>
+      <p>The agent is <strong>not</strong> subject to the default O.C.G.A. § 10-6B-56 limitations on gifts. The agent may make gifts of any amount to the principal's spouse, lineal descendants, their spouses, or supported charities &mdash; outright or in trust (including GRATs, CLTs, CRTs, and gift trusts) &mdash; even if those gifts incur gift or GST tax.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Gifting Safeguards</div>
+      <div class="card-title">Consultation &amp; Good Faith Requirements</div>
+      <p>Before making any gift or gratuitous transfer, the agent must determine in good faith that the gift is consistent with the principal's tax and estate planning objectives and consult with: (i) the principal (if not incapacitated), (ii) the principal's living children, (iii) tax attorney, and (iv) accountant. A non-spouse agent may only gift to themselves with the prior consent of all adult children.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Trust Powers</div>
+      <div class="card-title">Powers Under Trust Instruments</div>
+      <p>The agent may exercise the principal's powers under any trust instrument to: remove a corporate trustee, appoint a successor trustee, agree to trustee compensation, vote ownership interests in entities held in trust, receive trust notices, and consent to trustee actions.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Tax Planning</div>
+      <div class="card-title">Power of Appointment &amp; Asset Substitution</div>
+      <p>The agent may exercise presently exercisable special powers of appointment and the principal's retained right to reacquire trust property by substituting assets of equivalent value &mdash; or release any such right. These powers support ongoing tax planning flexibility during incapacity.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Digital &amp; Modern</div>
+      <div class="card-title">Digital Assets Access</div>
+      <p>The agent has full access to all digital assets, including electronic communications content, and may provide custodians with written disclosure requests, copies of the POA, certifications, and account identifiers to gain access.</p>
+    </div>
+  </div>
+
+  <!-- Limitations and Safeguards -->
+  <h2 class="section-title" style="margin-top:48px;">Built-In Safeguards</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label">Life Insurance</div>
+      <div class="card-title">Agent Cannot Control Insurance on Own Life</div>
+      <p>The agent is explicitly prohibited from exercising any incidents of ownership over insurance policies on the agent's own life, or exercising any power of appointment over such policies. This prevents the agent's estate tax inclusion of those policies.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Non-Family Agents</div>
+      <div class="card-title">Self-Dealing Limitation</div>
+      <p>An agent who is not an ancestor, spouse, or descendant of the principal cannot use the principal's property to benefit themselves or anyone they owe an obligation of support, unless specifically authorized in the Special Instructions.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Conservator Nomination</div>
+      <div class="card-title">Agent Nominated as Conservator</div>
+      <p>Both documents nominate the person serving as agent under the POA to also serve as court-appointed conservator of the principal's estate, if one becomes necessary. This aligns the court-supervised and voluntary authority frameworks.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Reliance</div>
+      <div class="card-title">Third-Party Protection</div>
+      <p>Any person (including the agent) may rely on the validity of the POA or a copy unless they have actual knowledge it has been terminated or is invalid. This facilitates practical use with financial institutions and other third parties.</p>
+    </div>
+  </div>
+
+  <div class="callout red">
+    <p><strong>Draft Status:</strong> These are draft documents &mdash; neither has been signed, dated, or notarized. Both powers of attorney require the principal's signature, one witness, and notarization. Both documents were prepared by Duncan Spratt P.A. at 191 Peachtree St NE #4400, Atlanta, GA 30303.</p>
+  </div>
+
+  <!-- General Authority Comparison Table -->
+  <h2 class="section-title" style="margin-top:48px;">General Authority — Subject Areas</h2>
+  <p class="section-intro">Both powers of attorney grant authority over all fourteen statutory categories. Neither document has limited or excluded any subject area.</p>
+
+  <div class="card" style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Subject Area</th>
+          <th>Mark's POA</th>
+          <th>Claire's POA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="feature-label">Real Property</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Tangible Personal Property</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Stocks &amp; Bonds</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Commodities &amp; Options</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Banks &amp; Financial Institutions</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Business Operations</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Insurance &amp; Annuities</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Estates, Trusts &amp; Beneficial Interests</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Claims &amp; Litigation</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Personal &amp; Family Maintenance</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Government Benefits / Military Service</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Retirement Plans</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">Taxes</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+        <tr><td class="feature-label">All Preceding Subjects</td><td class="match">Granted</td><td class="match">Granted</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Specific Authority -->
+  <h2 class="section-title" style="margin-top:48px;">Specific Authority — Enhanced Powers</h2>
+  <p class="section-intro">Both powers of attorney also grant all nine categories of "specific authority" that require separate initialing under the Georgia statutory form. These are powers the agent would <em>not</em> have unless specifically authorized.</p>
+
+  <div class="card" style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Specific Power</th>
+          <th>Mark's POA</th>
+          <th>Claire's POA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="feature-label">Create/fund/amend/revoke inter vivos trust</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Make gifts (expanded per Special Instructions)</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Create/change rights of survivorship</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Create/change beneficiary designations</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Delegate POA authority to another person</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Waive joint/survivor annuity rights</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Electronic communications access</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Exercise delegable fiduciary powers</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+        <tr><td class="feature-label">Renounce interest in property / power of appointment</td><td class="diff">Initialed</td><td class="diff">Initialed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<div class="footer">
+  <p>UBS | Alpha Partners &bull; Murray Family Estate Plan Summary &bull; 2025 Draft Documents</p>
+  <p style="margin-top:8px; color:#555;">This summary is for informational purposes only and does not constitute legal advice. The Murrays should review all documents with their attorney before execution.</p>
+</div>
+</div><!-- end #app-content -->
+
+<script>
+// === PASSWORD AUTHENTICATION ===
+const HASH = '8b807f8d37d12b07bac4c5538952aaac7277d0132695ba7ba58628d97cafd79e';
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function checkPassword() {
+  const input = document.getElementById('auth-input').value;
+  const hash = await sha256(input);
+  if (hash === HASH) {
+    sessionStorage.setItem('murray-auth', 'true');
+    document.getElementById('auth-gate').style.display = 'none';
+    document.getElementById('app-content').style.display = 'block';
+  } else {
+    document.getElementById('auth-error').style.display = 'block';
+    document.getElementById('auth-input').style.borderColor = '#cc0000';
+    document.getElementById('auth-input').value = '';
+    setTimeout(() => {
+      document.getElementById('auth-error').style.display = 'none';
+      document.getElementById('auth-input').style.borderColor = '#2a3040';
+    }, 2000);
+  }
+}
+
+// Enter key support
+document.getElementById('auth-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') checkPassword();
+});
+
+// Check session on load
+if (sessionStorage.getItem('murray-auth') === 'true') {
+  document.getElementById('auth-gate').style.display = 'none';
+  document.getElementById('app-content').style.display = 'block';
+}
+
+// === TAB NAVIGATION ===
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
